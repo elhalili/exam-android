@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".presentation.views.RegisterActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <TextView
+        android:id="@+id/fullName_label_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fullName"
+        app:layout_constraintBottom_toTopOf="@+id/fullName_editText"
+        app:layout_constraintStart_toStartOf="@+id/fullName_editText"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <EditText
+        android:id="@+id/fullName_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_input"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/enter_ur_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/phone_label_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullName_label_textView" />
+
+    <TextView
+        android:id="@+id/phone_label_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_no"
+        app:layout_constraintBottom_toTopOf="@+id/phone_editText"
+        app:layout_constraintStart_toStartOf="@+id/phone_editText"
+        app:layout_constraintTop_toBottomOf="@+id/fullName_editText" />
+
+    <EditText
+        android:id="@+id/phone_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_input"
+        android:drawableLeft="@drawable/baseline_phone_android_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/enter_ur_phone"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/email_lablel_textView"
+        app:layout_constraintEnd_toEndOf="@+id/fullName_editText"
+        app:layout_constraintStart_toStartOf="@+id/fullName_editText"
+        app:layout_constraintTop_toBottomOf="@+id/phone_label_textView" />
+
+    <TextView
+        android:id="@+id/email_lablel_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/email_sign_up_editText"
+        app:layout_constraintStart_toStartOf="@+id/email_sign_up_editText"
+        app:layout_constraintTop_toBottomOf="@+id/phone_editText" />
+
+    <EditText
+        android:id="@+id/email_sign_up_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_input"
+        android:drawableLeft="@drawable/baseline_mail_outline_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/enter_ur_mail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/password_lbl_textView"
+        app:layout_constraintEnd_toEndOf="@+id/phone_editText"
+        app:layout_constraintStart_toStartOf="@+id/phone_editText"
+        app:layout_constraintTop_toBottomOf="@+id/email_lablel_textView" />
+
+    <TextView
+        android:id="@+id/password_lbl_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        app:layout_constraintBottom_toTopOf="@+id/psw_editText"
+        app:layout_constraintStart_toStartOf="@+id/psw_editText"
+        app:layout_constraintTop_toBottomOf="@+id/email_sign_up_editText" />
+
+    <EditText
+        android:id="@+id/psw_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_input"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/enter_ur_psw"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_psw_lbl_textView"
+        app:layout_constraintEnd_toEndOf="@+id/email_sign_up_editText"
+        app:layout_constraintStart_toStartOf="@+id/email_sign_up_editText"
+        app:layout_constraintTop_toBottomOf="@+id/password_lbl_textView" />
+
+    <TextView
+        android:id="@+id/confirm_psw_lbl_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_psw"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_psw_editText"
+        app:layout_constraintStart_toStartOf="@+id/confirm_psw_editText"
+        app:layout_constraintTop_toBottomOf="@+id/psw_editText" />
+
+    <EditText
+        android:id="@+id/confirm_psw_editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_input"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/confirm_ur_psw"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/psw_editText"
+        app:layout_constraintStart_toStartOf="@+id/psw_editText"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_psw_lbl_textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_sign"
+        android:text="@string/sign_up"
+        android:textColor="@color/bg_color"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_psw_editText"
+        app:layout_constraintStart_toStartOf="@+id/confirm_psw_editText"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_psw_editText" />
+
+    <TextView
+        android:id="@+id/footer_sign_up_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/footer_p_sign_un"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/signin_textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/signin_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/sign_in"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/footer_sign_up_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/footer_sign_up_textView"
+        app:layout_constraintTop_toTopOf="@+id/footer_sign_up_textView" />
+
+    <TextView
+        android:id="@+id/sign_up_header_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
